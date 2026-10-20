@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: student-app
-          image: student-app:1.0
+          image: student-app:v2
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 5000
@@ -46,6 +46,6 @@ spec:
   selector:
     app: student-app
   ports:
-    - port: 5678
-      targetPort: 5678
+    - port: 5000
+      targetPort: 5000
       nodePort: 30080
